@@ -115,11 +115,11 @@ def az_artist_searcher(artist):
 def az_song_searcher(song):
     artists = song['artists']
     title = song['title']
-    ### copy some logic from the other for artsits loop
+    ### copy some logic from the other for artists loop
     for artist in artists:
         song = "+".join(song)
         song = re.sub(r"\s", "+", song)
-        r = get_func(f"https://search.azlyrics.com/search.php?q={song}&x=3b6188737bcfb300b4669cac47d275b5d4f76bb97762ed930ce0fb64ebdd0d4c", (10, 20))
+        r = get_func(f"https://search.azlyrics.com/search.php?q={song}&x=62ea26e9d8f4fb60ae9f8e35bc3ee3feb516419c1b5e2f1d62061d6238d0acb3", (10, 20))
     
         if r == 0:
             return 0
